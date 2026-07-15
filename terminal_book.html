@@ -1,0 +1,2593 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AEL Terminal Command Bible — Complete Reference</title>
+<meta name="description" content="The ultimate terminal cheat sheet: 200+ commands across 20 categories. Navigation, Git, networking, text processing, shell features, macOS, Linux and more.">
+<meta name="author" content="Ayman Elmasry — AEL Digital Studio">
+<meta name="theme-color" content="#0B1220">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.aymanelmasry.me/terminal-book">
+<meta property="og:title" content="AEL Terminal Command Bible — Complete Reference">
+<meta property="og:description" content="The ultimate terminal cheat sheet: 200+ commands across 20 categories. Navigation, Git, networking, text processing, shell features, macOS, Linux and more.">
+<meta property="og:image" content="https://www.aymanelmasry.me/ael-logo.svg">
+<meta property="og:site_name" content="AEL Digital Studio">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AEL Terminal Command Bible — Complete Reference">
+<meta name="twitter:description" content="The ultimate terminal cheat sheet: 200+ commands across 20 categories.">
+<meta name="twitter:image" content="https://www.aymanelmasry.me/ael-logo.svg">
+<meta name="twitter:creator" content="@aymanelmasryael">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "AEL Terminal Command Bible",
+  "description": "The ultimate terminal cheat sheet: 200+ commands across 20 categories. Navigation, Git, networking, text processing, shell features, macOS, Linux and more.",
+  "url": "https://www.aymanelmasry.me/terminal-book",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "Reference",
+  "operatingSystem": "All",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "author": { "@type": "Person", "name": "Ayman Elmasry", "url": "https://www.aymanelmasry.me" },
+  "publisher": { "@type": "Organization", "name": "AEL Digital Studio", "url": "https://www.aymanelmasry.me" },
+  "dateModified": "2026-07-14",
+  "featureList": ["204+ terminal commands", "20 categories", "Instant search", "One-click copy", "Dark mode", "Responsive design"]
+}
+</script>
+
+<link rel="icon" type="image/svg+xml" href="ael-logo.svg">
+<link rel="stylesheet" href="terminal_book.css">
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header class="ael-header">
+  <div class="ael-brand">
+    <svg class="ael-logo-svg" viewBox="0 0 226.77 226.77" xmlns="http://www.w3.org/2000/svg" aria-label="AEL Logo">
+      <path d="m97.19,48.59v16.2h-32.4v-16.2c0-8.94-7.25-16.2-16.2-16.2s-16.2,7.25-16.2,16.2v16.2H0v-16.2c0-5.68.98-11.13,2.76-16.2C9.44,13.52,27.44,0,48.59,0s39.16,13.52,45.83,32.4c1.79,5.07,2.76,10.52,2.76,16.2Z" fill="#ffffff"/>
+      <rect y="97.19" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="64.79" y="97.19" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="64.79" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="129.58" y="97.19" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="161.98" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="194.38" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="129.58" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="161.98" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="129.58" y="32.4" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="32.4" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="64.79" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="97.19" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="129.58" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="161.98" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="194.38" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+    </svg>
+    <div class="ael-brand-text">
+      <h1><span>AEL</span> <span class="ael-green">Terminal Command Bible</span></h1>
+      <div class="subtitle">AEL Digital Studio — Complete Reference</div>
+    </div>
+  </div>
+  <div class="ael-stats">
+    <span><span class="stat-num">204+</span> commands</span>
+    <span><span class="stat-num">20</span> categories</span>
+    <span><span class="stat-num">3</span> platforms</span>
+  </div>
+</header>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav-bar">
+<a href="#navigation" class="nav-link" style="--nav-color: #00FF88">📁 Navigation</a>
+<a href="#files" class="nav-link" style="--nav-color: #FFD700">🗂 Files & Folders</a>
+<a href="#view" class="nav-link" style="--nav-color: #A78BFA">👁 View Content</a>
+<a href="#search" class="nav-link" style="--nav-color: #00BFFF">🔍 Search & Find</a>
+<a href="#permissions" class="nav-link" style="--nav-color: #FF8C42">🔐 Permissions & Config</a>
+<a href="#processes" class="nav-link" style="--nav-color: #F472B6">⚙️ Processes</a>
+<a href="#network" class="nav-link" style="--nav-color: #00FFCC">🌐 Network</a>
+<a href="#archives" class="nav-link" style="--nav-color: #FFD700">📦 Archives</a>
+<a href="#system" class="nav-link" style="--nav-color: #94A3B8">💻 System</a>
+<a href="#shell" class="nav-link" style="--nav-color: #6C47FF">🐚 Shell Features</a>
+<a href="#glob" class="nav-link" style="--nav-color: #FF4D8D">🎯 Globbing & Expansion</a>
+<a href="#redirect" class="nav-link" style="--nav-color: #00BFFF">🔀 Redirection & Pipes</a>
+<a href="#textproc" class="nav-link" style="--nav-color: #00FF88">📝 Text Processing</a>
+<a href="#editors" class="nav-link" style="--nav-color: #A78BFA">✏️ Editors</a>
+<a href="#git" class="nav-link" style="--nav-color: #FF4D8D">🌿 Git</a>
+<a href="#javascript" class="nav-link" style="--nav-color: #A78BFA">⬢ JavaScript / Node</a>
+<a href="#macos" class="nav-link" style="--nav-color: #7DD3FC">🍎 macOS Specific</a>
+<a href="#shortcuts" class="nav-link" style="--nav-color: #FFD700">⌨️ Keyboard Shortcuts</a>
+<a href="#combos" class="nav-link" style="--nav-color: #FF4D8D">🧩 Useful Combos</a>
+<a href="#platforms" class="nav-link" style="--nav-color: #94A3B8">🖥 Platform Notes</a>
+
+</nav>
+
+<!-- ═══ SEARCH ═══ -->
+<div class="search-wrap">
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" placeholder="Search commands, descriptions, flags..." autocomplete="off" spellcheck="false">
+    <span class="search-hint" id="searchHint">Press / to search</span>
+    <button class="search-clear" id="clearBtn" onclick="clearSearch()">✕</button>
+  </div>
+</div>
+<div class="no-results" id="noResults">No results found.</div>
+
+<!-- ═══ CONTENT ═══ -->
+<main class="main-content">
+
+    <section class="cat-section" id="navigation">
+      <div class="cat-header" style="--cat-color: #00FF88">
+        <span class="cat-icon">📁</span>
+        <h2 class="cat-title">Navigation</h2>
+        <span class="cat-count">6</span>
+      </div>
+      <div class="cat-grid">
+        
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">pwd</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'pwd')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Print working directory</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="ls list files &amp; folders -a  Show hidden files -l  Long format (details) -la  Hidden + details -lh  Human-readable sizes -1  One per line -t  Sort by time -S  Sort by size -R  Recursive">
+        <div class="cmd-top">
+          <code class="cmd-text">ls</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'ls')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">List files & folders</div>
+        <div class='cmd-flags'><span class='flag-item'>-a  Show hidden files</span><span class='flag-item'>-l  Long format (details)</span><span class='flag-item'>-la  Hidden + details</span><span class='flag-item'>-lh  Human-readable sizes</span><span class='flag-item'>-1  One per line</span><span class='flag-item'>-t  Sort by time</span><span class='flag-item'>-S  Sort by size</span><span class='flag-item'>-R  Recursive</span></div>
+        
+        
+      </div>
+      <div class="cmd-card" data-search="cd &lt;span class=&#x27;arg&#x27;&gt;[dir]&lt;/span&gt; change directory ~  Go to home ..  Go up one level -  Previous directory /  Root directory">
+        <div class="cmd-top">
+          <code class="cmd-text">cd <span class='arg'>[dir]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'cd [dir]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Change directory</div>
+        <div class='cmd-flags'><span class='flag-item'>~  Go to home</span><span class='flag-item'>..  Go up one level</span><span class='flag-item'>-  Previous directory</span><span class='flag-item'>/  Root directory</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>cd ~/Projects</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">pushd <span class='arg'>dir</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'pushd dir')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Push directory onto stack</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>pushd /tmp</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">popd</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'popd')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Pop directory stack & cd</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">dirs -v</code>
+          <span class='plat-tag plat-zsh'>ZSH</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'dirs -v')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Show directory stack with indices</div>
+        
+        
+        
+      </div>
+      </div>
+    </section>
+    <section class="cat-section" id="files">
+      <div class="cat-header" style="--cat-color: #FFD700">
+        <span class="cat-icon">🗂</span>
+        <h2 class="cat-title">Files & Folders</h2>
+        <span class="cat-count">7</span>
+      </div>
+      <div class="cat-grid">
+        
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">touch <span class='arg'>[file]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'touch [file]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Create empty file or update timestamp</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>touch index.html</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="mkdir &lt;span class=&#x27;arg&#x27;&gt;[dir]&lt;/span&gt; create directory -p  Create nested directories">
+        <div class="cmd-top">
+          <code class="cmd-text">mkdir <span class='arg'>[dir]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'mkdir [dir]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Create directory</div>
+        <div class='cmd-flags'><span class='flag-item'>-p  Create nested directories</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>mkdir -p src/components</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="cp &lt;span class=&#x27;arg&#x27;&gt;a b&lt;/span&gt; copy file or folder -r  Recursive (folders) -i  Interactive (ask before overwrite) -v  Verbose">
+        <div class="cmd-top">
+          <code class="cmd-text">cp <span class='arg'>a b</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'cp a b')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Copy file or folder</div>
+        <div class='cmd-flags'><span class='flag-item'>-r  Recursive (folders)</span><span class='flag-item'>-i  Interactive (ask before overwrite)</span><span class='flag-item'>-v  Verbose</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>cp -r folder/ backup/</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="mv &lt;span class=&#x27;arg&#x27;&gt;a b&lt;/span&gt; move or rename file/folder -i  Interactive -v  Verbose">
+        <div class="cmd-top">
+          <code class="cmd-text">mv <span class='arg'>a b</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'mv a b')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Move or rename file/folder</div>
+        <div class='cmd-flags'><span class='flag-item'>-i  Interactive</span><span class='flag-item'>-v  Verbose</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>mv old.txt new.txt</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="rm &lt;span class=&#x27;arg&#x27;&gt;[file]&lt;/span&gt; delete file (permanent!) -r  Recursive (folders) -f  Force (no confirmation) -i  Interactive">
+        <div class="cmd-top">
+          <code class="cmd-text">rm <span class='arg'>[file]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'rm [file]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Delete file (permanent!)</div>
+        <div class='cmd-flags'><span class='flag-item'>-r  Recursive (folders)</span><span class='flag-item'>-f  Force (no confirmation)</span><span class='flag-item'>-i  Interactive</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>rm -rf node_modules</code></div>
+        <div class='cmd-tip'>💡 Deleted files cannot be recovered. Use with caution.</div>
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">ln -s <span class='arg'>target link</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'ln -s target link')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Create symbolic link</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>ln -s /usr/local/bin/python3 /usr/bin/python</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">readlink -f <span class='arg'>link</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'readlink -f link')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Resolve symlink to absolute path</div>
+        
+        
+        
+      </div>
+      </div>
+    </section>
+    <section class="cat-section" id="view">
+      <div class="cat-header" style="--cat-color: #A78BFA">
+        <span class="cat-icon">👁</span>
+        <h2 class="cat-title">View Content</h2>
+        <span class="cat-count">6</span>
+      </div>
+      <div class="cat-grid">
+        
+      <div class="cmd-card" data-search="cat &lt;span class=&#x27;arg&#x27;&gt;[file]&lt;/span&gt; print entire file contents -n  Show line numbers">
+        <div class="cmd-top">
+          <code class="cmd-text">cat <span class='arg'>[file]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'cat [file]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Print entire file contents</div>
+        <div class='cmd-flags'><span class='flag-item'>-n  Show line numbers</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>cat -n file.txt</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="less &lt;span class=&#x27;arg&#x27;&gt;[file]&lt;/span&gt; scroll through file (q to quit) /pattern  Search forward n / N  Next / prev match g / G  Jump to start / end Space  Page down b  Page up">
+        <div class="cmd-top">
+          <code class="cmd-text">less <span class='arg'>[file]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'less [file]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Scroll through file (q to quit)</div>
+        <div class='cmd-flags'><span class='flag-item'>/pattern  Search forward</span><span class='flag-item'>n / N  Next / prev match</span><span class='flag-item'>g / G  Jump to start / end</span><span class='flag-item'>Space  Page down</span><span class='flag-item'>b  Page up</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>less longfile.txt</code></div>
+        <div class='cmd-tip'>💡 man pages use less by default.</div>
+      </div>
+      <div class="cmd-card" data-search="head &lt;span class=&#x27;arg&#x27;&gt;[file]&lt;/span&gt; first 10 lines -n 20  Show first N lines">
+        <div class="cmd-top">
+          <code class="cmd-text">head <span class='arg'>[file]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'head [file]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">First 10 lines</div>
+        <div class='cmd-flags'><span class='flag-item'>-n 20  Show first N lines</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>head -n 20 logfile.txt</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="tail &lt;span class=&#x27;arg&#x27;&gt;[file]&lt;/span&gt; last 10 lines -n 20  Show last N lines -f  Follow (live output)">
+        <div class="cmd-top">
+          <code class="cmd-text">tail <span class='arg'>[file]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'tail [file]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Last 10 lines</div>
+        <div class='cmd-flags'><span class='flag-item'>-n 20  Show last N lines</span><span class='flag-item'>-f  Follow (live output)</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>tail -f /var/log/syslog</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="open &lt;span class=&#x27;arg&#x27;&gt;.&lt;/span&gt; open folder in finder -a AppName  Open with specific app -e  Open with TextEdit">
+        <div class="cmd-top">
+          <code class="cmd-text">open <span class='arg'>.</span></code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'open .')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Open folder in Finder</div>
+        <div class='cmd-flags'><span class='flag-item'>-a AppName  Open with specific app</span><span class='flag-item'>-e  Open with TextEdit</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>open -a "Visual Studio Code" .</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">man <span class='arg'>[cmd]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'man [cmd]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Show manual page for command</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>man ls</code></div>
+        
+      </div>
+      </div>
+    </section>
+    <section class="cat-section" id="search">
+      <div class="cat-header" style="--cat-color: #00BFFF">
+        <span class="cat-icon">🔍</span>
+        <h2 class="cat-title">Search & Find</h2>
+        <span class="cat-count">7</span>
+      </div>
+      <div class="cat-grid">
+        
+      <div class="cmd-card" data-search="grep &lt;span class=&#x27;arg&#x27;&gt;&quot;x&quot; file&lt;/span&gt; search text in file -i  Case-insensitive -r  Recursive -n  Line numbers -l  Filenames only -c  Count matches -v  Invert (NOT matching) -w  Whole words only -A3  3 lines after match -B2  2 lines before match -E  Extended regex (OR)">
+        <div class="cmd-top">
+          <code class="cmd-text">grep <span class='arg'>"x" file</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'grep &quot;x&quot; file')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Search text in file</div>
+        <div class='cmd-flags'><span class='flag-item'>-i  Case-insensitive</span><span class='flag-item'>-r  Recursive</span><span class='flag-item'>-n  Line numbers</span><span class='flag-item'>-l  Filenames only</span><span class='flag-item'>-c  Count matches</span><span class='flag-item'>-v  Invert (NOT matching)</span><span class='flag-item'>-w  Whole words only</span><span class='flag-item'>-A3  3 lines after match</span><span class='flag-item'>-B2  2 lines before match</span><span class='flag-item'>-E  Extended regex (OR)</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>grep -rn "TODO" src/</code></div>
+        <div class='cmd-tip'>💡 Combine: grep -rinl for recursive + case-insensitive + filenames only.</div>
+      </div>
+      <div class="cmd-card" data-search="find &lt;span class=&#x27;arg&#x27;&gt;. -name&lt;/span&gt; find files by name/pattern -iname  Case-insensitive name -type f  Files only -type d  Directories only -mtime -7  Modified last 7 days -size +10M  Larger than 10MB -empty  Empty files/dirs -delete  Delete matching (careful!) -exec cmd {} +  Run cmd on results">
+        <div class="cmd-top">
+          <code class="cmd-text">find <span class='arg'>. -name</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'find . -name')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Find files by name/pattern</div>
+        <div class='cmd-flags'><span class='flag-item'>-iname  Case-insensitive name</span><span class='flag-item'>-type f  Files only</span><span class='flag-item'>-type d  Directories only</span><span class='flag-item'>-mtime -7  Modified last 7 days</span><span class='flag-item'>-size +10M  Larger than 10MB</span><span class='flag-item'>-empty  Empty files/dirs</span><span class='flag-item'>-delete  Delete matching (careful!)</span><span class='flag-item'>-exec cmd {} +  Run cmd on results</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>find . -name '*.js' -type f</code></div>
+        <div class='cmd-tip'>💡 Use + not \; with -exec to batch args (faster).</div>
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">which <span class='arg'>[cmd]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'which [cmd]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Find command location/path</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>which python3</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">type <span class='arg'>[cmd]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'type [cmd]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">How command would be interpreted</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>type ls</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">file <span class='arg'>myfile</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'file myfile')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Detect file type (text, binary…)</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>file image.jpg</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">stat <span class='arg'>file</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'stat file')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">File metadata (size, perms, dates)</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>stat myfile.txt</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">mdfind <span class='arg'>"query"</span></code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'mdfind &quot;query&quot;')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Spotlight search from CLI</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>mdfind -name "report.pdf"</code></div>
+        
+      </div>
+      </div>
+    </section>
+    <section class="cat-section" id="permissions">
+      <div class="cat-header" style="--cat-color: #FF8C42">
+        <span class="cat-icon">🔐</span>
+        <h2 class="cat-title">Permissions & Config</h2>
+        <span class="cat-count">10</span>
+      </div>
+      <div class="cat-grid">
+        
+      <div class="cmd-card" data-search="chmod &lt;span class=&#x27;arg&#x27;&gt;755 file&lt;/span&gt; change file permissions +x  Add execute -x  Remove execute 755  rwxr-xr-x (owner all, others r+x) 644  rw-r--r-- (owner rw, others r) 777  rwxrwxrwx (everyone — dangerous!)">
+        <div class="cmd-top">
+          <code class="cmd-text">chmod <span class='arg'>755 file</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'chmod 755 file')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Change file permissions</div>
+        <div class='cmd-flags'><span class='flag-item'>+x  Add execute</span><span class='flag-item'>-x  Remove execute</span><span class='flag-item'>755  rwxr-xr-x (owner all, others r+x)</span><span class='flag-item'>644  rw-r--r-- (owner rw, others r)</span><span class='flag-item'>777  rwxrwxrwx (everyone — dangerous!)</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>chmod +x script.sh</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="chown &lt;span class=&#x27;arg&#x27;&gt;user file&lt;/span&gt; change file owner -R  Recursive">
+        <div class="cmd-top">
+          <code class="cmd-text">chown <span class='arg'>user file</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'chown user file')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Change file owner</div>
+        <div class='cmd-flags'><span class='flag-item'>-R  Recursive</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>chown -R ayman:staff folder/</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">sudo <span class='arg'>[cmd]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'sudo [cmd]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Run command as administrator</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>sudo apt update</code></div>
+        <div class='cmd-tip'>💡 Be careful. Sudo bypasses safety restrictions.</div>
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">sudo !!</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'sudo !!')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Re-run last command with sudo</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">alias <span class='arg'>ll="ls -la"</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'alias ll=&quot;ls -la&quot;')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Create shortcut for a command</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>alias gs='git status'</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">unalias <span class='arg'>name</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'unalias name')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Remove an alias</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>unalias ll</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">export <span class='arg'>VAR=value</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'export VAR=value')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Set environment variable</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>export PATH="$HOME/bin:$PATH"</code></div>
+        <div class='cmd-tip'>💡 Add to .bashrc/.zshrc to persist across sessions.</div>
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">source <span class='arg'>~/.zshrc</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'source ~/.zshrc')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Reload shell config</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">env</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'env')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">List all environment variables</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">unset <span class='arg'>VAR</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'unset VAR')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Remove environment variable</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>unset MY_VAR</code></div>
+        
+      </div>
+      </div>
+    </section>
+    <section class="cat-section" id="processes">
+      <div class="cat-header" style="--cat-color: #F472B6">
+        <span class="cat-icon">⚙️</span>
+        <h2 class="cat-title">Processes</h2>
+        <span class="cat-count">12</span>
+      </div>
+      <div class="cat-grid">
+        
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">ps aux</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'ps aux')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">List all running processes</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>ps aux | grep python</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">top</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'top')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Live process viewer (q to quit)</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">htop</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'htop')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Enhanced process viewer</div>
+        
+        
+        <div class='cmd-tip'>💡 Install: brew install htop / apt install htop</div>
+      </div>
+      <div class="cmd-card" data-search="kill &lt;span class=&#x27;arg&#x27;&gt;[pid]&lt;/span&gt; kill process by id -9  Force kill (SIGKILL) -15  Graceful (SIGTERM, default)">
+        <div class="cmd-top">
+          <code class="cmd-text">kill <span class='arg'>[pid]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'kill [pid]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Kill process by ID</div>
+        <div class='cmd-flags'><span class='flag-item'>-9  Force kill (SIGKILL)</span><span class='flag-item'>-15  Graceful (SIGTERM, default)</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>kill -9 12345</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">killall <span class='arg'>[app]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'killall [app]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Kill process by name</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>killall Safari</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">bg / fg</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'bg / fg')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Resume suspended process in background / foreground</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>bg  # then fg %1</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">jobs</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'jobs')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">List background & suspended jobs</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">disown <span class='arg'>%1</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'disown %1')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Detach job (survives logout)</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">nohup <span class='arg'>cmd &</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'nohup cmd &amp;')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Run command immune to hangups</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>nohup ./server.sh &</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl + C</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl + C')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Stop / kill foreground process (SIGINT)</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl + Z</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl + Z')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Suspend foreground process (SIGTSTP)</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl + D</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl + D')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Send EOF (exit shell if line empty)</div>
+        
+        
+        
+      </div>
+      </div>
+    </section>
+    <section class="cat-section" id="network">
+      <div class="cat-header" style="--cat-color: #00FFCC">
+        <span class="cat-icon">🌐</span>
+        <h2 class="cat-title">Network</h2>
+        <span class="cat-count">11</span>
+      </div>
+      <div class="cat-grid">
+        
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">ping <span class='arg'>[host]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'ping [host]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Test connectivity to host</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>ping google.com</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="curl &lt;span class=&#x27;arg&#x27;&gt;[url]&lt;/span&gt; fetch url content -O  Save with original filename -o file  Save with custom name -L  Follow redirects -I  Headers only -X POST  HTTP method -H  Custom header -d  POST data -s  Silent mode">
+        <div class="cmd-top">
+          <code class="cmd-text">curl <span class='arg'>[url]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'curl [url]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Fetch URL content</div>
+        <div class='cmd-flags'><span class='flag-item'>-O  Save with original filename</span><span class='flag-item'>-o file  Save with custom name</span><span class='flag-item'>-L  Follow redirects</span><span class='flag-item'>-I  Headers only</span><span class='flag-item'>-X POST  HTTP method</span><span class='flag-item'>-H  Custom header</span><span class='flag-item'>-d  POST data</span><span class='flag-item'>-s  Silent mode</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>curl -O https://example.com/file.zip</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="wget &lt;span class=&#x27;arg&#x27;&gt;[url]&lt;/span&gt; download file from url -O file  Custom output name -c  Continue partial download -q  Quiet mode">
+        <div class="cmd-top">
+          <code class="cmd-text">wget <span class='arg'>[url]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'wget [url]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Download file from URL</div>
+        <div class='cmd-flags'><span class='flag-item'>-O file  Custom output name</span><span class='flag-item'>-c  Continue partial download</span><span class='flag-item'>-q  Quiet mode</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>wget https://example.com/file.zip</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="ssh &lt;span class=&#x27;arg&#x27;&gt;user@host&lt;/span&gt; connect to remote host via ssh -p 2222  Non-standard port -L 8080:lo:80  Local port forward">
+        <div class="cmd-top">
+          <code class="cmd-text">ssh <span class='arg'>user@host</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'ssh user@host')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Connect to remote host via SSH</div>
+        <div class='cmd-flags'><span class='flag-item'>-p 2222  Non-standard port</span><span class='flag-item'>-L 8080:lo:80  Local port forward</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>ssh -p 2222 ayman@server.com</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">scp <span class='arg'>file user@host:path/</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'scp file user@host:path/')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Copy file to/from remote host</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>scp ./build.zip ayman@server:/var/www/</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">ssh-copy-id <span class='arg'>user@host</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'ssh-copy-id user@host')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Copy public key (passwordless login)</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">ifconfig</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'ifconfig')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Show network interfaces</div>
+        
+        
+        <div class='cmd-tip'>💡 On Linux use ip addr instead.</div>
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">ipconfig getifaddr en0</code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'ipconfig getifaddr en0')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Get IP address for primary network</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">netstat -an</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'netstat -an')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Show active connections</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">lsof -i :80</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'lsof -i :80')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Show processes using port 80</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">dig <span class='arg'>domain</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'dig domain')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">DNS lookup</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>dig google.com</code></div>
+        
+      </div>
+      </div>
+    </section>
+    <section class="cat-section" id="archives">
+      <div class="cat-header" style="--cat-color: #FFD700">
+        <span class="cat-icon">📦</span>
+        <h2 class="cat-title">Archives</h2>
+        <span class="cat-count">7</span>
+      </div>
+      <div class="cat-grid">
+        
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">tar -czf <span class='arg'>archive.tar.gz dir/</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'tar -czf archive.tar.gz dir/')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Create gzipped archive</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>tar -czf backup.tar.gz ~/Projects</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">tar -xzf <span class='arg'>archive.tar.gz</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'tar -xzf archive.tar.gz')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Extract gzipped archive</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>tar -xzf backup.tar.gz</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">tar -tf <span class='arg'>archive.tar.gz</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'tar -tf archive.tar.gz')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">List archive contents without extracting</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">zip -r <span class='arg'>archive.zip folder/</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'zip -r archive.zip folder/')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Create zip archive (recursive)</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>zip -r project.zip src/</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="unzip &lt;span class=&#x27;arg&#x27;&gt;[file]&lt;/span&gt; extract zip archive -d folder  Extract to specific folder">
+        <div class="cmd-top">
+          <code class="cmd-text">unzip <span class='arg'>[file]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'unzip [file]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Extract zip archive</div>
+        <div class='cmd-flags'><span class='flag-item'>-d folder  Extract to specific folder</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>unzip project.zip -d ./output</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">gzip <span class='arg'>file</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'gzip file')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Compress file with gzip</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>gzip logfile</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">gunzip <span class='arg'>file.gz</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'gunzip file.gz')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Decompress gzip file</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>gunzip logfile.gz</code></div>
+        
+      </div>
+      </div>
+    </section>
+    <section class="cat-section" id="system">
+      <div class="cat-header" style="--cat-color: #94A3B8">
+        <span class="cat-icon">💻</span>
+        <h2 class="cat-title">System</h2>
+        <span class="cat-count">16</span>
+      </div>
+      <div class="cat-grid">
+        
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">uname -a</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'uname -a')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Show system information</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">sw_vers</code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'sw_vers')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Show macOS version</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">df -h</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'df -h')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Show disk usage (human-readable)</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="du -sh &lt;span class=&#x27;arg&#x27;&gt;*&lt;/span&gt; show folder sizes -d 1  Depth: 1 level only">
+        <div class="cmd-top">
+          <code class="cmd-text">du -sh <span class='arg'>*</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'du -sh *')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Show folder sizes</div>
+        <div class='cmd-flags'><span class='flag-item'>-d 1  Depth: 1 level only</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>du -sh */</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">free -h</code>
+          <span class='plat-tag plat-linux'>LINUX</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'free -h')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Show memory usage</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">history</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'history')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Show command history</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>history | grep git</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">clear</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'clear')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Clear terminal screen</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">echo <span class='arg'>[text]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'echo [text]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Print text to terminal</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>echo "Hello, $USER"</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">date</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'date')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Show current date & time</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">uptime</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'uptime')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Show how long system has been running</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">whoami</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'whoami')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Print current username</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">which <span class='arg'>cmd</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'which cmd')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Show full path of command</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>which node</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="brew &lt;span class=&#x27;arg&#x27;&gt;install pkg&lt;/span&gt; install package via homebrew update  Update Homebrew upgrade  Upgrade all packages list  List installed packages">
+        <div class="cmd-top">
+          <code class="cmd-text">brew <span class='arg'>install pkg</span></code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'brew install pkg')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Install package via Homebrew</div>
+        <div class='cmd-flags'><span class='flag-item'>update  Update Homebrew</span><span class='flag-item'>upgrade  Upgrade all packages</span><span class='flag-item'>list  List installed packages</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>brew install node</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">softwareupdate -l</code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'softwareupdate -l')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Check for macOS updates</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="caffeinate prevent mac from sleeping -t &lt;sec&gt;  Prevent for N seconds">
+        <div class="cmd-top">
+          <code class="cmd-text">caffeinate</code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'caffeinate')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Prevent Mac from sleeping</div>
+        <div class='cmd-flags'><span class='flag-item'>-t &lt;sec&gt;  Prevent for N seconds</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>caffeinate -t 3600</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">say <span class='arg'>"text"</span></code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'say &quot;text&quot;')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Text-to-speech</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>say "Hello World"</code></div>
+        
+      </div>
+      </div>
+    </section>
+    <section class="cat-section" id="shell">
+      <div class="cat-header" style="--cat-color: #6C47FF">
+        <span class="cat-icon">🐚</span>
+        <h2 class="cat-title">Shell Features</h2>
+        <span class="cat-count">20</span>
+      </div>
+      <div class="cat-grid">
+        
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl+A / Ctrl+E</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl+A / Ctrl+E')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Jump to start / end of line</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Alt+F / Alt+B</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Alt+F / Alt+B')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Move forward / back one word</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl+U</code>
+          <span class='plat-tag plat-zsh'>ZSH</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl+U')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Cut to start of line (zsh: whole line)</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl+K</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl+K')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Cut to end of line</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl+W</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl+W')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Cut word before cursor</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Alt+D</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Alt+D')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Cut word after cursor</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl+Y</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl+Y')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Paste (yank) last cut text</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Alt+Y</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Alt+Y')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Cycle kill ring (after Ctrl+Y)</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl+_</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl+_')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Undo last edit</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl+T / Alt+T</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl+T / Alt+T')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Swap last two chars / words</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Alt+U / Alt+L</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Alt+U / Alt+L')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Uppercase / lowercase word</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl+X Ctrl+E</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl+X Ctrl+E')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Open current line in $EDITOR</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">!!</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, '!!')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Repeat entire last command</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>sudo !!</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">!$</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, '!$')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Last argument of previous command</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>cd !$</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">!^</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, '!^')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">First argument of previous command</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">^old^new</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, '^old^new')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Re-run last cmd, replacing old with new</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">!str</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, '!str')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Most recent cmd starting with str</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">history | grep <span class='arg'>x</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'history | grep x')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Search history for x</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>history | grep docker</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl+R</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl+R')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Reverse search history</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Alt+.</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Alt+.')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Insert last arg of previous cmd (cycle)</div>
+        
+        
+        
+      </div>
+      </div>
+    </section>
+    <section class="cat-section" id="glob">
+      <div class="cat-header" style="--cat-color: #FF4D8D">
+        <span class="cat-icon">🎯</span>
+        <h2 class="cat-title">Globbing & Expansion</h2>
+        <span class="cat-count">10</span>
+      </div>
+      <div class="cat-grid">
+        
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">*</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, '*')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Match any characters (zero or more)</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>ls *.js</code></div>
+        <div class='cmd-tip'>💡 Globs are not regex.</div>
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">?</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, '?')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Match exactly one character</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>ls file?.txt</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">[abc] / [a-z]</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, '[abc] / [a-z]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Match one of set / range</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>ls file[1-3].txt</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">[!abc]</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, '[!abc]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Match any character NOT in set</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">**</code>
+          <span class='plat-tag plat-bash'>BASH</span>
+          <button class="copy-btn" onclick="copyCmd(this, '**')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Recursive subdirs (globstar)</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>ls **/*.go</code></div>
+        <div class='cmd-tip'>💡 zsh: on by default. bash: needs shopt -s globstar.</div>
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">*.{js,ts}</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, '*.{js,ts}')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Brace expansion: multiple patterns</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>ls *.{js,ts}</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">file{1..5}.txt</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'file{1..5}.txt')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Brace expansion: range</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>touch file{1..5}.txt</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">{01..10}</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, '{01..10}')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Zero-padded brace expansion</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">mv f.txt{,.bak}</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'mv f.txt{,.bak}')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Shorthand: expand to mv f.txt f.txt.bak</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">mkdir -p src/{lib,bin,test}</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'mkdir -p src/{lib,bin,test}')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Create multiple dirs at once</div>
+        
+        
+        
+      </div>
+      </div>
+    </section>
+    <section class="cat-section" id="redirect">
+      <div class="cat-header" style="--cat-color: #00BFFF">
+        <span class="cat-icon">🔀</span>
+        <h2 class="cat-title">Redirection & Pipes</h2>
+        <span class="cat-count">9</span>
+      </div>
+      <div class="cat-grid">
+        
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">cmd > file</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'cmd &gt; file')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Redirect stdout (overwrite)</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>ls > filelist.txt</code></div>
+        <div class='cmd-tip'>💡 This will overwrite the file without asking.</div>
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">cmd >> file</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'cmd &gt;&gt; file')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Redirect stdout (append)</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>date >> log.txt</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">cmd 2> file</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'cmd 2&gt; file')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Redirect stderr to file</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">cmd &> file / 2>&1</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'cmd &amp;&gt; file / 2&gt;&amp;1')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Both stdout+stderr to file</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">cmd | tee file</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'cmd | tee file')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Stdout AND write to file</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>ls | tee output.txt</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">cmd1 | cmd2</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'cmd1 | cmd2')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Pipe stdout to stdin of next cmd</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>ls | grep '.txt'</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">cmd1 | xargs cmd2</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'cmd1 | xargs cmd2')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Stdin lines become args for cmd2</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>find . -name '*.log' | xargs rm</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">$(cmd)</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, '$(cmd)')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Command substitution: inline output</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>echo "Today is $(date)"</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">< <span class='arg'>(cmd)</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, '&lt; (cmd)')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Process substitution: treat output as file</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>diff <(ls a) <(ls b)</code></div>
+        <div class='cmd-tip'>💡 Creates a temp file descriptor. Incredibly useful.</div>
+      </div>
+      </div>
+    </section>
+    <section class="cat-section" id="textproc">
+      <div class="cat-header" style="--cat-color: #00FF88">
+        <span class="cat-icon">📝</span>
+        <h2 class="cat-title">Text Processing</h2>
+        <span class="cat-count">8</span>
+      </div>
+      <div class="cat-grid">
+        
+      <div class="cmd-card" data-search="sed &lt;span class=&#x27;arg&#x27;&gt;s/old/new/g file&lt;/span&gt; replace all occurrences in file -i  In-place edit (Linux) -i &#x27;&#x27;  In-place edit (macOS) -n &#x27;5,10p&#x27;  Print only lines 5–10">
+        <div class="cmd-top">
+          <code class="cmd-text">sed <span class='arg'>s/old/new/g file</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'sed s/old/new/g file')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Replace all occurrences in file</div>
+        <div class='cmd-flags'><span class='flag-item'>-i  In-place edit (Linux)</span><span class='flag-item'>-i &#x27;&#x27;  In-place edit (macOS)</span><span class='flag-item'>-n &#x27;5,10p&#x27;  Print only lines 5–10</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>sed 's/foo/bar/g' file.txt</code></div>
+        <div class='cmd-tip'>💡 macOS sed -i needs empty arg: sed -i &#x27;&#x27; &#x27;s/old/new/g&#x27; f</div>
+      </div>
+      <div class="cmd-card" data-search="awk &lt;span class=&#x27;arg&#x27;&gt;{print $2} file&lt;/span&gt; print 2nd column (space-delimited) -F:  Set field separator $3 &gt; 100  Filter by column value">
+        <div class="cmd-top">
+          <code class="cmd-text">awk <span class='arg'>{print $2} file</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'awk {print $2} file')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Print 2nd column (space-delimited)</div>
+        <div class='cmd-flags'><span class='flag-item'>-F:  Set field separator</span><span class='flag-item'>$3 &gt; 100  Filter by column value</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>awk -F: '{print $1}' /etc/passwd</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="sort sort lines -n  Numeric sort -r  Reverse -u  Unique only -k2  Sort by 2nd column">
+        <div class="cmd-top">
+          <code class="cmd-text">sort</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'sort')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Sort lines</div>
+        <div class='cmd-flags'><span class='flag-item'>-n  Numeric sort</span><span class='flag-item'>-r  Reverse</span><span class='flag-item'>-u  Unique only</span><span class='flag-item'>-k2  Sort by 2nd column</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>sort -nr file.txt</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">uniq -c</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'uniq -c')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Count unique lines (pipe from sort first!)</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>sort file.txt | uniq -c</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">wc -l <span class='arg'>file</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'wc -l file')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Count lines in file</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>wc -l myfile.txt</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">column -t <span class='arg'>file.csv</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'column -t file.csv')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Pretty-print CSV/TSV aligned</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>column -t data.csv</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">tr <span class='arg'>a-z A-Z</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'tr a-z A-Z')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Translate/replace characters</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>echo hello | tr a-z A-Z</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">cut -d: -f1 <span class='arg'>file</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'cut -d: -f1 file')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Extract fields by delimiter</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>cut -d: -f1 /etc/passwd</code></div>
+        
+      </div>
+      </div>
+    </section>
+    <section class="cat-section" id="editors">
+      <div class="cat-header" style="--cat-color: #A78BFA">
+        <span class="cat-icon">✏️</span>
+        <h2 class="cat-title">Editors</h2>
+        <span class="cat-count">3</span>
+      </div>
+      <div class="cat-grid">
+        
+      <div class="cmd-card" data-search="nano &lt;span class=&#x27;arg&#x27;&gt;file&lt;/span&gt; open file in nano editor Ctrl+O  Save Ctrl+X  Exit Ctrl+K  Cut line Ctrl+U  Paste Ctrl+W  Search Ctrl+G  Help">
+        <div class="cmd-top">
+          <code class="cmd-text">nano <span class='arg'>file</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'nano file')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Open file in Nano editor</div>
+        <div class='cmd-flags'><span class='flag-item'>Ctrl+O  Save</span><span class='flag-item'>Ctrl+X  Exit</span><span class='flag-item'>Ctrl+K  Cut line</span><span class='flag-item'>Ctrl+U  Paste</span><span class='flag-item'>Ctrl+W  Search</span><span class='flag-item'>Ctrl+G  Help</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>nano ~/.zshrc</code></div>
+        <div class='cmd-tip'>💡 nano is default editor on most Linux distros.</div>
+      </div>
+      <div class="cmd-card" data-search="vi &lt;span class=&#x27;arg&#x27;&gt;file&lt;/span&gt; open file in vi/vim i  Insert mode Esc  Normal mode :w  Save :q  Quit :wq / ZZ  Save &amp; quit :q!  Force quit dd  Delete line yy  Yank (copy) line p  Paste /pattern  Search u  Undo Ctrl+R  Redo">
+        <div class="cmd-top">
+          <code class="cmd-text">vi <span class='arg'>file</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'vi file')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Open file in Vi/Vim</div>
+        <div class='cmd-flags'><span class='flag-item'>i  Insert mode</span><span class='flag-item'>Esc  Normal mode</span><span class='flag-item'>:w  Save</span><span class='flag-item'>:q  Quit</span><span class='flag-item'>:wq / ZZ  Save &amp; quit</span><span class='flag-item'>:q!  Force quit</span><span class='flag-item'>dd  Delete line</span><span class='flag-item'>yy  Yank (copy) line</span><span class='flag-item'>p  Paste</span><span class='flag-item'>/pattern  Search</span><span class='flag-item'>u  Undo</span><span class='flag-item'>Ctrl+R  Redo</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>vi script.sh</code></div>
+        <div class='cmd-tip'>💡 vi is on every Unix system. Set as default: export EDITOR=vi.</div>
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">code <span class='arg'>.</span></code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'code .')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Open folder in VS Code</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>code ~/Projects/myapp</code></div>
+        
+      </div>
+      </div>
+    </section>
+    <section class="cat-section" id="git">
+      <div class="cat-header" style="--cat-color: #FF4D8D">
+        <span class="cat-icon">🌿</span>
+        <h2 class="cat-title">Git</h2>
+        <span class="cat-count">16</span>
+      </div>
+      <div class="cat-grid">
+        
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">git init</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'git init')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Initialize new repository</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">git clone <span class='arg'>[url]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'git clone [url]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Clone remote repository</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>git clone https://github.com/user/repo.git</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">git status</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'git status')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Show working tree status</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="git add &lt;span class=&#x27;arg&#x27;&gt;.&lt;/span&gt; stage all changes -p  Stage interactively">
+        <div class="cmd-top">
+          <code class="cmd-text">git add <span class='arg'>.</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'git add .')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Stage all changes</div>
+        <div class='cmd-flags'><span class='flag-item'>-p  Stage interactively</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>git add -p</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="git commit &lt;span class=&#x27;arg&#x27;&gt;-m &quot;msg&quot;&lt;/span&gt; commit staged changes -a  Stage all + commit --amend  Add to last commit">
+        <div class="cmd-top">
+          <code class="cmd-text">git commit <span class='arg'>-m "msg"</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'git commit -m &quot;msg&quot;')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Commit staged changes</div>
+        <div class='cmd-flags'><span class='flag-item'>-a  Stage all + commit</span><span class='flag-item'>--amend  Add to last commit</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>git commit -m "feat: add auth"</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="git push push commits to remote -u origin main  Set upstream">
+        <div class="cmd-top">
+          <code class="cmd-text">git push</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'git push')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Push commits to remote</div>
+        <div class='cmd-flags'><span class='flag-item'>-u origin main  Set upstream</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>git push -u origin main</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">git pull</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'git pull')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Fetch & merge from remote</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="git log --oneline compact commit history --graph  Show branch graph -n 10  Last 10 commits">
+        <div class="cmd-top">
+          <code class="cmd-text">git log --oneline</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'git log --oneline')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Compact commit history</div>
+        <div class='cmd-flags'><span class='flag-item'>--graph  Show branch graph</span><span class='flag-item'>-n 10  Last 10 commits</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>git log --oneline --graph</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="git branch list / create / delete branches -d branch  Delete branch -D branch  Force delete">
+        <div class="cmd-top">
+          <code class="cmd-text">git branch</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'git branch')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">List / create / delete branches</div>
+        <div class='cmd-flags'><span class='flag-item'>-d branch  Delete branch</span><span class='flag-item'>-D branch  Force delete</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>git branch feature-x</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="git checkout &lt;span class=&#x27;arg&#x27;&gt;branch&lt;/span&gt; switch branch -b  Create &amp; switch">
+        <div class="cmd-top">
+          <code class="cmd-text">git checkout <span class='arg'>branch</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'git checkout branch')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Switch branch</div>
+        <div class='cmd-flags'><span class='flag-item'>-b  Create &amp; switch</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>git checkout -b new-feature</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">git merge <span class='arg'>branch</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'git merge branch')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Merge branch into current</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>git merge feature-x</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="git stash stash uncommitted changes pop  Apply &amp; remove stash list  List all stashes">
+        <div class="cmd-top">
+          <code class="cmd-text">git stash</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'git stash')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Stash uncommitted changes</div>
+        <div class='cmd-flags'><span class='flag-item'>pop  Apply &amp; remove stash</span><span class='flag-item'>list  List all stashes</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>git stash pop</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="git diff show unstaged changes --staged  Show staged changes">
+        <div class="cmd-top">
+          <code class="cmd-text">git diff</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'git diff')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Show unstaged changes</div>
+        <div class='cmd-flags'><span class='flag-item'>--staged  Show staged changes</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>git diff --staged</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">git remote -v</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'git remote -v')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">List remote repositories</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">git reset --hard HEAD</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'git reset --hard HEAD')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Discard all changes (dangerous!)</div>
+        
+        
+        <div class='cmd-tip'>💡 This cannot be undone. Use with extreme caution.</div>
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">git cherry-pick <span class='arg'>hash</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'git cherry-pick hash')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Apply a specific commit</div>
+        
+        
+        
+      </div>
+      </div>
+    </section>
+    <section class="cat-section" id="javascript">
+      <div class="cat-header" style="--cat-color: #A78BFA">
+        <span class="cat-icon">⬢</span>
+        <h2 class="cat-title">JavaScript / Node</h2>
+        <span class="cat-count">11</span>
+      </div>
+      <div class="cat-grid">
+        
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">node <span class='arg'>[file]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'node [file]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Run JavaScript file</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>node app.js</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">node -v</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'node -v')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Show Node.js version</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">npm init -y</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'npm init -y')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Create package.json with defaults</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">npm install</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'npm install')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Install all dependencies</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="npm install &lt;span class=&#x27;arg&#x27;&gt;[pkg]&lt;/span&gt; install a package -D  Dev dependency -g  Global install">
+        <div class="cmd-top">
+          <code class="cmd-text">npm install <span class='arg'>[pkg]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'npm install [pkg]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Install a package</div>
+        <div class='cmd-flags'><span class='flag-item'>-D  Dev dependency</span><span class='flag-item'>-g  Global install</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>npm install -D typescript</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">npm run <span class='arg'>[script]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'npm run [script]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Run a package.json script</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>npm run dev</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">npm outdated</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'npm outdated')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">List outdated dependencies</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">npx <span class='arg'>[pkg]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'npx [pkg]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Run package without installing</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>npx create-react-app myapp</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">npx expo start --clear</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'npx expo start --clear')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Start Expo dev server (clear cache)</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="yarn &lt;span class=&#x27;arg&#x27;&gt;[cmd]&lt;/span&gt; yarn package manager add pkg  Install dev  Dev dependency remove pkg  Uninstall">
+        <div class="cmd-top">
+          <code class="cmd-text">yarn <span class='arg'>[cmd]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'yarn [cmd]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Yarn package manager</div>
+        <div class='cmd-flags'><span class='flag-item'>add pkg  Install</span><span class='flag-item'>dev  Dev dependency</span><span class='flag-item'>remove pkg  Uninstall</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>yarn add react-router-dom</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="pnpm &lt;span class=&#x27;arg&#x27;&gt;[cmd]&lt;/span&gt; pnpm package manager (fast, disk-efficient) add pkg  Install -D  Dev dependency">
+        <div class="cmd-top">
+          <code class="cmd-text">pnpm <span class='arg'>[cmd]</span></code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'pnpm [cmd]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">PNPM package manager (fast, disk-efficient)</div>
+        <div class='cmd-flags'><span class='flag-item'>add pkg  Install</span><span class='flag-item'>-D  Dev dependency</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>pnpm add express</code></div>
+        
+      </div>
+      </div>
+    </section>
+    <section class="cat-section" id="macos">
+      <div class="cat-header" style="--cat-color: #7DD3FC">
+        <span class="cat-icon">🍎</span>
+        <h2 class="cat-title">macOS Specific</h2>
+        <span class="cat-count">10</span>
+      </div>
+      <div class="cat-grid">
+        
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">pbcopy</code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'pbcopy')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Copy stdin to clipboard</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>pwd | pbcopy</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">pbpaste</code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'pbpaste')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Paste clipboard to stdout</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>pbpaste > file.txt</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">open -a <span class='arg'>"App"</span></code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'open -a &quot;App&quot;')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Open app by name</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>open -a "Google Chrome"</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="mdfind &lt;span class=&#x27;arg&#x27;&gt;&quot;query&quot;&lt;/span&gt; spotlight search from cli -name  Search by name">
+        <div class="cmd-top">
+          <code class="cmd-text">mdfind <span class='arg'>"query"</span></code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'mdfind &quot;query&quot;')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Spotlight search from CLI</div>
+        <div class='cmd-flags'><span class='flag-item'>-name  Search by name</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>mdfind -name "report.pdf"</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="sips --resamplewidth 1200 *.jpg resize images from cli --resampleHeight N  By height -s format png  Convert format">
+        <div class="cmd-top">
+          <code class="cmd-text">sips --resampleWidth 1200 *.jpg</code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'sips --resampleWidth 1200 *.jpg')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Resize images from CLI</div>
+        <div class='cmd-flags'><span class='flag-item'>--resampleHeight N  By height</span><span class='flag-item'>-s format png  Convert format</span></div>
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>sips --resampleWidth 800 *.png</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">defaults read <span class='arg'>[domain]</span></code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'defaults read [domain]')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Read app preference</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>defaults read com.apple.finder</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">launchctl list</code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'launchctl list')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">List launch agents</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">networksetup -listallhardwareports</code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'networksetup -listallhardwareports')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">List network interfaces</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">system_profiler SPHardwareDataType</code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'system_profiler SPHardwareDataType')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Show hardware info</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">osascript -e <span class='arg'>"tell app \"...\""</span></code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'osascript -e &quot;tell app \&quot;...\&quot;&quot;')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Run AppleScript from CLI</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>osascript -e 'tell app "Finder" to get name of every disk'</code></div>
+        
+      </div>
+      </div>
+    </section>
+    <section class="cat-section" id="shortcuts">
+      <div class="cat-header" style="--cat-color: #FFD700">
+        <span class="cat-icon">⌨️</span>
+        <h2 class="cat-title">Keyboard Shortcuts</h2>
+        <span class="cat-count">15</span>
+      </div>
+      <div class="cat-grid">
+        
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Tab</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Tab')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Autocomplete file/folder names</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Up / Down Arrow</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Up / Down Arrow')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Previous / next command in history</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl+A</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl+A')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Jump to beginning of line</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl+E</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl+E')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Jump to end of line</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl+U</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl+U')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Delete entire line</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl+K</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl+K')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Delete from cursor to end of line</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl+W</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl+W')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Delete word before cursor</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Option+Delete</code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'Option+Delete')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Delete word before cursor (macOS)</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl+Y</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl+Y')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Paste deleted text back</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl+R</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl+R')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Search command history</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl+G</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl+G')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Cancel history search</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl+C</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl+C')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Cancel current command</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl+L</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl+L')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Clear screen (same as clear)</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Cmd+K</code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'Cmd+K')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Clear screen and scrollback (macOS)</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Ctrl+D</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'Ctrl+D')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Exit Terminal (if line empty)</div>
+        
+        
+        
+      </div>
+      </div>
+    </section>
+    <section class="cat-section" id="combos">
+      <div class="cat-header" style="--cat-color: #FF4D8D">
+        <span class="cat-icon">🧩</span>
+        <h2 class="cat-title">Useful Combos</h2>
+        <span class="cat-count">11</span>
+      </div>
+      <div class="cat-grid">
+        
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">cmd1 && cmd2</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'cmd1 &amp;&amp; cmd2')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Run cmd2 only if cmd1 succeeds</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>mkdir newdir && cd newdir</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">cmd1 || cmd2</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'cmd1 || cmd2')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Run cmd2 only if cmd1 fails</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>test -f file || echo 'not found'</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">cmd &</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'cmd &amp;')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Run command in background</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>node server.js &</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">sort | uniq -c | sort -rn</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'sort | uniq -c | sort -rn')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Count unique lines, sorted by frequency</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>cat access.log | awk '{print $1}' | sort | uniq -c | sort -rn | head</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">ls -lhS</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'ls -lhS')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">List files sorted by size (largest first)</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">tail -f log.txt | grep --line-buffered ERROR</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'tail -f log.txt | grep --line-buffered ERROR')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Live-filter log for errors</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">find . -name '*.tmp' -mtime +7 -delete</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'find . -name &#x27;*.tmp&#x27; -mtime +7 -delete')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Delete .tmp files older than 7 days</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">cat file.txt | xargs -I{} echo "Item: {}"</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'cat file.txt | xargs -I{} echo &quot;Item: {}&quot;')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Process each line with a command</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">watch -n 2 cmd</code>
+          <span class='plat-tag plat-linux'>LINUX</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'watch -n 2 cmd')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Re-run command every 2 seconds</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>watch -n 2 df -h</code></div>
+        <div class='cmd-tip'>💡 macOS: brew install watch</div>
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">du -sh */ | sort -rh | head</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'du -sh */ | sort -rh | head')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Top 5 largest folders</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">ls *.bak 2>/dev/null || echo 'No backup files'</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'ls *.bak 2&gt;/dev/null || echo &#x27;No backup files&#x27;')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Try command, fallback on failure</div>
+        
+        
+        
+      </div>
+      </div>
+    </section>
+    <section class="cat-section" id="platforms">
+      <div class="cat-header" style="--cat-color: #94A3B8">
+        <span class="cat-icon">🖥</span>
+        <h2 class="cat-title">Platform Notes</h2>
+        <span class="cat-count">9</span>
+      </div>
+      <div class="cat-grid">
+        
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">macOS Alt shortcuts</code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'macOS Alt shortcuts')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">iTerm2: Profiles → Keys → Left Option → Esc+ | Terminal.app: Preferences → Profiles → Keyboard → Use Option as Meta key</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Linux Ctrl+S freeze</code>
+          <span class='plat-tag plat-linux'>LINUX</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'Linux Ctrl+S freeze')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Add stty -ixon to .bashrc/.zshrc to enable Ctrl+S search</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">macOS sed -i</code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'macOS sed -i')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Needs empty arg: sed -i '' 's/old/new/g' file</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">macOS watch</code>
+          <span class='plat-tag plat-macos'>MACOS</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'macOS watch')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Not installed by default. Install: brew install watch</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">Linux ip addr</code>
+          <span class='plat-tag plat-linux'>LINUX</span>
+          <button class="copy-btn" onclick="copyCmd(this, 'Linux ip addr')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Linux replacement for ifconfig</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">WSL</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, 'WSL')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">Windows Subsystem for Linux — uses Linux userspace, everything works as on native Linux</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">$? (exit code)</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, '$? (exit code)')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">0 = success, non-zero = failure</div>
+        
+        <div class='cmd-example'><span class='ex-label'>Example:</span> <code>echo $?</code></div>
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">$! (PID)</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, '$! (PID)')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">PID of last background process</div>
+        
+        
+        
+      </div>
+      <div class="cmd-card" data-search="">
+        <div class="cmd-top">
+          <code class="cmd-text">$$ (PID)</code>
+          
+          <button class="copy-btn" onclick="copyCmd(this, '$$ (PID)')" title="Copy to clipboard">📋 Copy</button>
+        </div>
+        <div class="cmd-desc">PID of current shell</div>
+        
+        
+        
+      </div>
+      </div>
+    </section>
+</main>
+
+<!-- ═══ BACK TO TOP ═══ -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="ael-footer">
+  <p><span class="brand">© 2026 Ayman Elmasry — AEL Digital Studio</span></p>
+  <p style="margin-top:6px;">
+    <a href="https://www.aymanelmasry.me">www.aymanelmasry.me</a> ·
+    <a href="mailto:ayman@aymanelmasry.me">ayman@aymanelmasry.me</a>
+  </p>
+  <p style="margin-top:6px;">
+    <a href="https://github.com/aymanelmasryael">GitHub</a> ·
+    <a href="https://linkedin.com/in/aymanelmasryael">LinkedIn</a> ·
+    <a href="https://x.com/aymanelmasryael">X</a> ·
+    <a href="https://instagram.com/aymanelmasryael">Instagram</a> ·
+    <a href="https://codepen.io/aymanelmasryael">CodePen</a>
+  </p>
+</footer>
+
+<script src="terminal_book.js"></script>
+</body>
+</html>
